@@ -14,6 +14,16 @@ If you want *all* events in *separate* markdown files (like in [the
 origin repository][origin]), just remove the `#` at the beginning of
 some lines in `ics2hugo.py`.
 
+## Upgrade python and dependencies
+
+```bash
+pyenv install --list
+pyenv install $latest_version
+pip install -r requirements.txt
+cat requirements.txt | cut -f1 -d= | xargs pip install -U
+pip freeze >requirements.txt
+```
+
 [hugo]: https://gohugo.io
 [ics]: https://en.wikipedia.org/wiki/ICalendar
 [origin]: https://github.com/tomluvoe/ics2hugo
