@@ -18,8 +18,8 @@ while getopts u:p: arg ; do
   esac
 done
 
-tm=$(gdate +%Y-%m)
-nm=$(gdate +%Y-%m -d 'next month')
+tm=$(date +%Y-%m)
+nm=$(date +%Y-%m -d 'next month')
 
 # https://stackoverflow.com/a/47438110/2642656
 convert_date_format() {
